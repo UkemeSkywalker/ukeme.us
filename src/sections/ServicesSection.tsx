@@ -1,11 +1,25 @@
 import FadeIn from '../components/FadeIn';
 
-const SERVICES = [
+type Service = {
+  number: string;
+  name: string;
+  description: string;
+  /** Optional supporting points listed under the description. */
+  bullets?: string[];
+};
+
+const SERVICES: Service[] = [
   {
     number: '01',
-    name: '3D Modeling',
+    name: 'Cloud Infrastructure',
     description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+      'I design and manage secure, scalable cloud environments that support modern applications and data workloads.',
+    bullets: [
+      'AWS and GCP architecture',
+      'Compute, networking, storage, and IAM',
+      'Cloud monitoring and cost-aware infrastructure',
+      'High availability, security, and reliability practices',
+    ],
   },
   {
     number: '02',
@@ -48,7 +62,7 @@ export default function ServicesSection() {
         className="mb-16 text-center font-black uppercase leading-none tracking-tight text-[#0C0C0C] sm:mb-20 md:mb-28"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
-        Services
+        What I Do
       </FadeIn>
 
       <div className="mx-auto max-w-5xl">
@@ -83,6 +97,17 @@ export default function ServicesSection() {
               >
                 {service.description}
               </p>
+
+              {service.bullets && (
+                <ul
+                  className="max-w-2xl list-disc space-y-1 pl-5 font-light leading-relaxed text-[#0C0C0C] opacity-60"
+                  style={{ fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)' }}
+                >
+                  {service.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           </FadeIn>
         ))}
