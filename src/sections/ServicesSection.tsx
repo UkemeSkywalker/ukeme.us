@@ -23,27 +23,47 @@ const SERVICES: Service[] = [
   },
   {
     number: '02',
-    name: 'Rendering',
+    name: 'DevOps & Platform Engineering',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'I create delivery systems that help teams release software consistently and safely.',
+    bullets: [
+      'CI/CD pipeline design and automation',
+      'Docker and Kubernetes',
+      'Environment standardization',
+      'Git-based workflows and deployment automation',
+      'Logging, monitoring, and operational visibility',
+    ],
   },
   {
     number: '03',
-    name: 'Motion Design',
+    name: 'Infrastructure as Code',
     description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+      'I replace repetitive manual configuration with version-controlled, modularized, repeatable infrastructure.',
+    bullets: [
+      'Terraform for Infrastructure-as-Code',
+      'Ansible for automated provisioning and configuration management',
+      'Infrastructure provisioning and lifecycle management',
+      'Testing and validation of infrastructure changes',
+    ],
   },
   {
     number: '04',
-    name: 'Branding',
+    name: 'Blockchain Node Operations',
     description:
-      'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.',
+      'Managing and maintaining blockchain infrastructure to ensure network stability, security, and performance for decentralized networks',
+    bullets: [
+      'Node setup (L1s & L2s), deployment and lifecycle management',
+      'Network monitoring, backups, upgrades, and incident response',
+      'Validator and RPC node operations',
+      'Infrastructure performance and availability optimization',
+      'Web3 infrastructure automation'
+    ],
   },
   {
     number: '05',
-    name: 'Web Design',
+    name: 'Web Development & Design',
     description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+      'Design and develop clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
   },
 ];
 
