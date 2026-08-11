@@ -31,7 +31,7 @@ function VideoCard({ video }: { video: Video }) {
   return (
     <article className="flex h-full flex-col gap-4">
       <div
-        className={`${FRAME_RADIUS} relative aspect-video overflow-hidden border-2 border-[#D7E2EA]`}
+        className={`${FRAME_RADIUS} relative aspect-video overflow-hidden border-2 border-[#0C0C0C]`}
       >
         {isPlaying ? (
           <iframe
@@ -58,8 +58,9 @@ function VideoCard({ video }: { video: Video }) {
               }
             />
             <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors duration-200 group-hover:bg-black/45">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#D7E2EA] bg-black/40 transition-transform duration-200 group-hover:scale-110 md:h-16 md:w-16">
-                <Play className="ml-0.5 h-6 w-6 fill-[#D7E2EA] text-[#D7E2EA] md:h-7 md:w-7" />
+              {/* Light badge on an arbitrary thumbnail, so it reads on any frame. */}
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 transition-transform duration-200 group-hover:scale-110 md:h-16 md:w-16">
+                <Play className="ml-0.5 h-6 w-6 fill-[#0C0C0C] text-[#0C0C0C] md:h-7 md:w-7" />
               </span>
             </span>
           </button>
@@ -67,7 +68,7 @@ function VideoCard({ video }: { video: Video }) {
       </div>
 
       <h3
-        className="font-medium leading-snug text-[#D7E2EA]"
+        className="font-medium leading-snug text-[#0C0C0C]"
         style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.25rem)' }}
       >
         {video.title}
@@ -77,7 +78,7 @@ function VideoCard({ video }: { video: Video }) {
         href={`https://www.youtube.com/watch?v=${video.id}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto text-xs font-light uppercase tracking-widest text-[#D7E2EA] opacity-60 transition-opacity duration-200 hover:opacity-100"
+        className="mt-auto text-xs font-light uppercase tracking-widest text-[#0C0C0C] opacity-60 transition-opacity duration-200 hover:opacity-100"
       >
         Watch on YouTube
       </a>
@@ -89,13 +90,13 @@ export default function VideosSection() {
   return (
     <section
       id="videos"
-      className="px-5 py-20 sm:px-8 sm:py-24 md:px-10 md:py-32"
-      style={{ background: '#0C0C0C' }}
+      className="rounded-t-[40px] px-5 py-20 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32"
+      style={{ background: '#FFFFFF' }}
     >
       <FadeIn
         as="h2"
         y={40}
-        className="hero-heading mb-16 text-center font-black uppercase leading-none tracking-tight sm:mb-20 md:mb-28"
+        className="mb-16 text-center font-black uppercase leading-none tracking-tight text-[#0C0C0C] sm:mb-20 md:mb-28"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
         Videos
