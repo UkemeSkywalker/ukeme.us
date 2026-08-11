@@ -5,8 +5,14 @@ import FadeIn from '../components/FadeIn';
 const ASSET_BASE =
   'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7';
 
-const ABOUT_COPY =
-  'With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let’s build something incredible together!';
+const ABOUT_COPY = [
+  'with 5+ years designing, automating, and operating production-grade infrastructure',
+  'across AWS, GCP, and large-scale Linux environments (500+ hosts/nodes).',
+  'Proven track record building CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins),',
+  'containerized and orchestrated platforms (Docker, Kubernetes, Helm),',
+  'and Infrastructure-as-Code with Terraform — cutting environment setup time',
+  'by ~80% and incident response time by up to 50%.',
+].join(' ');
 
 /** The four 3D props that frame the section. */
 const DECOR = [

@@ -11,7 +11,7 @@ const NAV_LINKS = [
 ];
 
 const PORTRAIT_SRC =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3GBogiq3HmMA5efCC2ZrvPyp6Td/hf_20260811_162531_355b237a-f1fe-4012-b831-18540a4f84ed.png';
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3GBogiq3HmMA5efCC2ZrvPyp6Td/hf_20260811_171504_2d3a33ad-cc88-4bc5-902c-a8aed5a35bed.png';
 
 export default function HeroSection() {
   return (
@@ -40,7 +40,7 @@ export default function HeroSection() {
           y={40}
           className="hero-heading mt-6 w-full whitespace-nowrap text-center text-[14vw] font-black uppercase leading-none tracking-tight sm:mt-4 sm:text-[15vw] md:-mt-5 md:text-[16vw] lg:text-[17.5vw]"
         >
-          Hi, i&apos;m Ukeme
+          Hi,<br></br>i&apos;m Ukeme
         </FadeIn>
       </div>
 
@@ -54,7 +54,7 @@ export default function HeroSection() {
             className="font-light uppercase leading-snug tracking-wide text-[#D7E2EA]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            a 3d creator driven by crafting striking and unforgettable projects
+            A Cloud, DevOps, Platform and Blockchain NodeOps Engineer
           </p>
         </FadeIn>
 
