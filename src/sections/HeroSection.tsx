@@ -1,40 +1,18 @@
 import ContactButton from '../components/ContactButton';
 import FadeIn from '../components/FadeIn';
 import Magnet from '../components/Magnet';
-import { CONTACT_HREF } from '../constants';
-
-const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Price', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Videos', href: '#videos' },
-  { label: 'Articles', href: '#articles' },
-  { label: 'Contact', href: CONTACT_HREF },
-];
 
 const PORTRAIT_SRC =
   'https://d8j0ntlcm91z4.cloudfront.net/user_3GBogiq3HmMA5efCC2ZrvPyp6Td/hf_20260811_171504_2d3a33ad-cc88-4bc5-902c-a8aed5a35bed.png';
 
 export default function HeroSection() {
+  // The top padding clears the fixed navbar, keeping the hero exactly one
+  // viewport tall so the portrait still lands on the fold.
   return (
-    <section className="relative flex h-screen flex-col" style={{ overflowX: 'clip' }}>
-      <FadeIn
-        as="nav"
-        delay={0}
-        y={-20}
-        className="flex justify-between px-6 pt-6 md:px-10 md:pt-8"
-      >
-        {NAV_LINKS.map(({ label, href }) => (
-          <a
-            key={label}
-            href={href}
-            className="text-sm font-medium uppercase tracking-wider text-[#D7E2EA] transition-opacity duration-200 hover:opacity-70 md:text-lg lg:text-[1.4rem]"
-          >
-            {label}
-          </a>
-        ))}
-      </FadeIn>
-
+    <section
+      className="relative flex h-screen flex-col pt-[var(--nav-height)]"
+      style={{ overflowX: 'clip' }}
+    >
       <div className="overflow-hidden">
         <FadeIn
           as="h1"

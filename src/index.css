@@ -10,11 +10,45 @@
   padding: 0;
 }
 
+:root {
+  --nav-height: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nav-height: 4.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Anchored sections stop below the fixed navbar instead of under it. */
+section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 html,
 body,
 #root {
   background: #0c0c0c;
   font-family: 'Kanit', sans-serif;
+}
+
+/* The navbar scrolls sideways on narrow screens; the bar itself stays clean. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .hero-heading {
