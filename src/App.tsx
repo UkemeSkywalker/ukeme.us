@@ -1,5 +1,6 @@
 import AboutSection from './sections/AboutSection';
 import ArticlesSection from './sections/ArticlesSection';
+import ContactSection from './sections/ContactSection';
 import HeroSection from './sections/HeroSection';
 import MarqueeSection from './sections/MarqueeSection';
 import Navbar from './components/Navbar';
@@ -21,6 +22,7 @@ export default function App() {
         <ProjectsSection />
         <VideosSection />
         <ArticlesSection />
+        <ContactSection />
       </main>
     </>
   );

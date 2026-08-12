@@ -25,7 +25,8 @@ html {
 }
 
 /* Anchored sections stop below the fixed navbar instead of under it. */
-section[id] {
+section[id],
+footer[id] {
   scroll-margin-top: var(--nav-height);
 }
 

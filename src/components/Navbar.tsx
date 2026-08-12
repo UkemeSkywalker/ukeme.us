@@ -1,5 +1,4 @@
 import FadeIn from './FadeIn';
-import { CONTACT_HREF } from '../constants';
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -7,7 +6,7 @@ const NAV_LINKS = [
   { label: 'Projects', href: '#projects' },
   { label: 'Videos', href: '#videos' },
   { label: 'Articles', href: '#articles' },
-  { label: 'Contact', href: CONTACT_HREF },
+  { label: 'Contact', href: '#contact' },
 ];
 
 /**
