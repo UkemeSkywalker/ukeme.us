@@ -1,6 +1,9 @@
 import { Play } from 'lucide-react';
 import { useState } from 'react';
 import FadeIn from '../components/FadeIn';
+import GhostButton from '../components/GhostButton';
+
+const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@thenodeopsguy';
 
 type Video = {
   id: string;
@@ -109,6 +112,10 @@ export default function VideosSection() {
           </FadeIn>
         ))}
       </div>
+
+      <FadeIn className="mt-14 flex justify-center sm:mt-16 md:mt-20">
+        <GhostButton label="View More" href={YOUTUBE_CHANNEL_URL} external tone="dark" />
+      </FadeIn>
     </section>
   );
 }
