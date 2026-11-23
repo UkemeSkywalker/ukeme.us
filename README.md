@@ -1,6 +1,6 @@
 # ukeme.us
 
-Portfolio landing page for Ukeme, a 3D creator.
+Portfolio landing page for Ukeme, a Cloud, DevOps, Platform and Blockchain NodeOps Engineer.
 
 ## Stack
 
