@@ -5,39 +5,74 @@ type Project = {
   number: string;
   name: string;
   category: string;
-  images: [string, string, string];
+  url: string;
+  /** Landing page screenshot, stored in public/projects. */
+  image: string;
 };
 
 const PROJECTS: Project[] = [
   {
     number: '01',
-    name: 'Nextlevel Studio',
+    name: 'Gino Foods',
     category: 'Client',
-    images: [
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
-    ],
+    url: 'https://ginonaija.ng/',
+    image: '/projects/ginonaija.webp',
   },
   {
     number: '02',
-    name: 'Aura Brand Identity',
-    category: 'Personal',
-    images: [
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
-    ],
+    name: 'NBA Surulere',
+    category: 'Client',
+    url: 'https://nbasurulerebranch.com/',
+    image: '/projects/nbasurulere.webp',
   },
   {
     number: '03',
-    name: 'Solaris Digital',
+    name: 'Kwedu Initiatives',
     category: 'Client',
-    images: [
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
-    ],
+    url: 'https://kwedu.org/',
+    image: '/projects/kwedu.webp',
+  },
+  {
+    number: '04',
+    name: 'IPP Global',
+    category: 'Client',
+    url: 'https://ippgbl.com/',
+    image: '/projects/ippgbl.webp',
+  },
+  {
+    number: '05',
+    name: 'Aquada Box Store',
+    category: 'Client',
+    url: 'https://aquadabox.com/store/',
+    image: '/projects/aquadabox.webp',
+  },
+  {
+    number: '06',
+    name: 'TinyPixo',
+    category: 'Client',
+    url: 'https://tinypixo.com/',
+    image: '/projects/tinypixo.webp',
+  },
+  {
+    number: '07',
+    name: 'Mac Tidar Mail',
+    category: 'Client',
+    url: 'https://mail.mactidar.com/',
+    image: '/projects/mactidar.webp',
+  },
+  {
+    number: '08',
+    name: 'Zetca',
+    category: 'Client',
+    url: 'https://zetca.pro/',
+    image: '/projects/zetca.webp',
+  },
+  {
+    number: '09',
+    name: 'Mac Tidar Cloud',
+    category: 'Client',
+    url: 'https://cloud.mactidar.com/',
+    image: '/projects/mactidarcloud.webp',
   },
 ];
 
@@ -77,34 +112,15 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </header>
 
-      <div className="grid grid-cols-5 gap-3">
-        <div className="col-span-2 flex flex-col gap-3">
-          <img
-            src={project.images[0]}
-            alt={`${project.name} preview`}
-            loading="lazy"
-            className={`${IMAGE_RADIUS} w-full object-cover`}
-            style={{ height: 'clamp(90px, 9vw, 140px)' }}
-          />
-          <img
-            src={project.images[1]}
-            alt={`${project.name} preview`}
-            loading="lazy"
-            className={`${IMAGE_RADIUS} w-full object-cover`}
-            style={{ height: 'clamp(110px, 12vw, 190px)' }}
-          />
-        </div>
-
-        <img
-          src={project.images[2]}
-          alt={`${project.name} preview`}
-          loading="lazy"
-          className={`${IMAGE_RADIUS} col-span-3 h-full w-full object-cover`}
-        />
-      </div>
+      <img
+        src={project.image}
+        alt={`${project.name} landing page`}
+        loading="lazy"
+        className={`${IMAGE_RADIUS} aspect-[16/10] w-full object-cover object-top`}
+      />
 
       {/* Pushed to the bottom so the buttons line up across the row. */}
-      <LiveProjectButton className="mt-auto w-full text-center" />
+      <LiveProjectButton href={project.url} className="mt-auto w-full text-center" />
     </article>
   );
 }
