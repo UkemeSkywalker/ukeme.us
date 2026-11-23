@@ -6,5 +6,5 @@ type LiveProjectButtonProps = {
 };
 
 export default function LiveProjectButton({ href, className }: LiveProjectButtonProps) {
-  return <GhostButton label="Live Project" href={href} className={className} />;
+  return <GhostButton label="Live Project" href={href} external className={className} />;
 }
