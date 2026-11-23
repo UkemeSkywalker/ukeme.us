@@ -14,7 +14,7 @@ const ABOUT_COPY = [
   'by ~80% and incident response time by up to 50%.',
 ].join(' ');
 
-/** The four 3D props that frame the section. */
+/** The four props that frame the section. */
 const DECOR = [
   {
     src: `${ASSET_BASE}/moon_icon.11395d36.png`,
